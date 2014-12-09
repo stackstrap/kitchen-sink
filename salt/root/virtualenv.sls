@@ -12,10 +12,6 @@ kitchensink_virtualenv:
     - require:
       - pkg: virtualenv_pkgs
 
-/home/vagrant/requirements.txt:
-  file.managed:
-    - source: salt://files/requirements.txt
-
 kitchensink_profile_setup:
   file:
     - append
