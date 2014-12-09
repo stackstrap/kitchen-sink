@@ -35,7 +35,7 @@ salt_github:
       - cmd: salt_requirements
 
 {% if pull_request %}
-get_all_pull_requests:
+fetch_pull_request:
   cmd:
     - run
     - cwd: {{ home }}/salt-repo
@@ -53,7 +53,7 @@ checkout_pull_request:
     - name: "git checkout origin/pr/{{ pull_request }}"
     - user: vagrant
     - require:
-      - cmd: get_all_pull_requests
+      - cmd: fetch_pull_request
 {% endif %}
 
 install_salt_dev:
