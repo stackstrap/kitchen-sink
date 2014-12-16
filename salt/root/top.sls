@@ -2,6 +2,7 @@
 base:
   '*':
     - utils
+    - mysql
     - nginx
     - php5
     - virtualenv
